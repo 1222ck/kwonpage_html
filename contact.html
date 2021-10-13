@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>...</title>
+        <link href="kwonpage.css" type="text/css" rel="stylesheet">
+        <link href="contact.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function() {
+            emailjs.init("user_Vwcj8v2pLPihk632afELH");
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                    // form id, #contact-form 안에 있는 것들 전송
+                document.getElementById("contact-form").addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // 서비스 id, 이메일 템플릿
+                    emailjs.sendForm('service_oo18zcd', 'template_csm91vw', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="menubar">
+            <ul>
+                <li class="menu"><a href="kwonpage.html">HOME</a></li>
+                <li class="menu"><a href="about.html">ABOUT</a></li>
+                <li class="menu"><a href="news.html">PORTFOLIO</a></li>
+                <li class="menu"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <h1 style="text-decoration: underline;">CONTACT</h1>
+        <div class="content" id="middle">
+            <div class="form" id="left">
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+            
+                    <label>이름</label> <br><br>
+                    <input type="text" name="to_name">
+            
+                    <br><br><label>보내는 이메일</label><br><br>
+                    <input type="email" name="from_name">
+            
+                    <br><br><label>Message</label><br><br>
+                    <textarea name="message"></textarea>
+            
+                    <input class="submit" type="submit" value="Send">
+                </form>
+            </div>
+            <div class="contact-text" id="right">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>경상남도 통영시</strong>
+                <br>
+                <br>
+                <br>
+                <i class="fas fa-mobile-alt"></i>
+                <strong>010-4141-3239</strong>
+                <br>
+                <br>
+                <br>
+                <i class="fas fa-envelope"></i>
+                <strong>941222ck@gmail.com<br>(파일 첨부 시)</strong>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

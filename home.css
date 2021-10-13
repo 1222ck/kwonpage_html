@@ -1,0 +1,88 @@
+html,
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  color: black;
+  font-weight: 400;
+  height: 100%;
+  word-break: keep-all;
+  height: 100vh;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.menubar {
+  display: block;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: "";
+  text-align: center;
+  font-weight: bold;
+}
+ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  color: burlywood;
+}
+.container {
+  background-image: url("background.jpg");
+  width: 100vw;
+  height: 100vh;
+}
+
+li {
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+.hi {
+  height: 150px;
+}
+#title {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+#subtitle {
+  font-size: 40px;
+  text-align: center;
+}
+
+.social {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+i {
+  size: 20px;
+  font-size: 50px;
+}
+.sns {
+  size: 10px;
+  width: 150px;
+}
